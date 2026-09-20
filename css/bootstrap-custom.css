@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/* =========================================================
+   bootstrap-custom.css
+   Portafolio personal - Megan "Megs" Giron
+   SOLO: menu principal (navbar), carousel, FancyBox
+   y ajustes para la animacion con WOW.js.
+   El resto del estilo del sitio vive en style.css
+   ========================================================= */
+
+/* -------------------- Navbar (menu principal) -------------------- */
+.navbar-megs {
+  background-color: var(--megs-crema);
+  border-bottom: 1px solid rgba(36, 31, 28, 0.08);
+  border-top: 4px solid;
+  border-image: linear-gradient(90deg, var(--megs-rosa), var(--megs-naranja), var(--megs-celeste), var(--megs-oliva)) 1;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.navbar-megs .navbar-brand img {
+  height: 46px;
+  width: auto;
+  border-radius: 10px;
+}
+
+.navbar-megs .nav-link {
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--megs-tinta);
+  margin-left: 0.35rem;
+  padding: 0.5rem 0.9rem !important;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.25s ease;
+}
+
+.navbar-megs .nav-link:hover,
+.navbar-megs .nav-link.active {
+  border-bottom-color: var(--megs-naranja);
+}
+
+/* -------------------- Carousel Owl (Proyectos destacados) -------------------- */
+.carousel-owl-megs {
+  padding: 0 6%;
+}
+.carousel-owl-megs article {
+  overflow: hidden;
+  border-radius: 1.1rem;
+}
+.carousel-owl-megs img {
+  filter: grayscale(1);
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  display: block;
+}
+.carousel-owl-megs img:hover {
+  filter: grayscale(0);
+  transform: scale(1.12);
+}
+.carousel-owl-megs .owl-item {
+  opacity: 0.55;
+  transform: scale(0.88);
+  transition: all 0.4s ease;
+}
+.carousel-owl-megs .owl-item.center {
+  opacity: 1;
+  transform: scale(1);
+}
+.carousel-owl-megs .owl-item.center img {
+  filter: grayscale(0);
+}
+.carousel-owl-megs .owl-dots {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.carousel-owl-megs .owl-dot {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border: 2px solid var(--megs-tinta);
+  border-radius: 50%;
+  margin: 0 6px;
+  background: transparent;
+}
+.carousel-owl-megs .owl-dot.active {
+  background-color: var(--megs-naranja);
+  border-color: var(--megs-naranja);
+}
+
+/* -------------------- FancyBox / Lightbox -------------------- */
+.fancybox__container { --fancybox-bg: rgba(36, 31, 28, 0.92); }
+
+/* -------------------- Animacion con WOW.js -------------------- */
+/* WOW.js aplica las clases de animate.css a los elementos
+   marcados con class="wow" en el HTML (ver hero de Inicio
+   y Acerca de mi). No requiere reglas propias aqui: el
+   efecto lo define animate.css, cargado en el head. */
+
+/* -------------------- Responsive (carousel) -------------------- */
+@media (max-width: 767.98px) {
+  .carousel-owl-megs { padding: 0 3%; }
+}

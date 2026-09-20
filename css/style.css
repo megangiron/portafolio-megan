@@ -1,0 +1,488 @@
+@charset "UTF-8";
+/* =========================================================
+   style.css
+   ========================================================= */
+
+:root {
+  --megs-rosa: #f5b5cf;
+  --megs-rosa-suave: #fbe6ee;
+  --megs-beige: #f0dac7;
+  --megs-naranja: #ff914d;
+  --megs-celeste: #b1e1e9;
+  --megs-oliva: #b6b44f;
+  --megs-tinta: #241f1c;
+  --megs-crema: #fbf6f1;
+
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Jost", "Segoe UI", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--megs-tinta);
+  background-color: var(--megs-crema);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4,
+.display-serif {
+  font-family: var(--font-display);
+  color: var(--megs-tinta);
+  letter-spacing: -0.01em;
+}
+
+p { max-width: 62ch; }
+
+a { color: var(--megs-tinta); text-decoration: none; }
+
+::selection { background: var(--megs-rosa); color: var(--megs-tinta); }
+
+/* -------------------- Utilidades de color -------------------- */
+.bg-rosa   { background-color: var(--megs-rosa) !important; }
+.bg-beige  { background-color: var(--megs-beige) !important; }
+.bg-naranja{ background-color: var(--megs-naranja) !important; }
+.bg-celeste{ background-color: var(--megs-celeste) !important; }
+.bg-oliva  { background-color: var(--megs-oliva) !important; }
+.bg-crema  { background-color: var(--megs-crema) !important; }
+.text-naranja { color: var(--megs-naranja) !important; }
+.text-tinta    { color: var(--megs-tinta) !important; }
+
+/* -------------------- Botones -------------------- */
+.btn-megs {
+  background-color: var(--megs-tinta);
+  color: var(--megs-crema);
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  font-weight: 500;
+  border: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.btn-megs:hover {
+  background-color: var(--megs-naranja);
+  color: var(--megs-tinta);
+  transform: translateY(-2px);
+}
+
+.btn-outline-megs {
+  border: 2px solid var(--megs-tinta);
+  color: var(--megs-tinta);
+  border-radius: 999px;
+  padding: 0.55rem 1.35rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.btn-outline-megs:hover {
+  background-color: var(--megs-tinta);
+  color: var(--megs-crema);
+}
+
+.btn-outline-megs-light {
+  display: inline-block;
+  border: 2px solid var(--megs-crema);
+  color: var(--megs-crema);
+  border-radius: 999px;
+  padding: 0.55rem 1.35rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.btn-outline-megs-light:hover {
+  background-color: var(--megs-crema);
+  color: var(--megs-tinta);
+}
+
+/* -------------------- Hero -------------------- */
+#inicio {
+  padding-top: 6.5rem;
+  padding-bottom: 4rem;
+  background-image: url("../img/echo-rosa-bg.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 420px;
+}
+
+/* -------------------- Patron de marca reutilizable -------------------- */
+#acerca {
+  background-image: url("../img/patron-celeste-bg.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 340px;
+}
+#servicios {
+  background-image: url("../img/patron-naranja-bg.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 340px;
+}
+#portafolio {
+  background-image: url("../img/patron-oliva-bg.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 340px;
+}
+#contacto {
+  background-image: url("../img/patron-rosa-bg.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 340px;
+}
+
+#inicio .hero-frame {
+  background: var(--megs-rosa);
+  border-radius: 1.75rem;
+  padding: 1rem;
+  transform: rotate(2deg);
+}
+#inicio .hero-frame img {
+  border-radius: 1.25rem;
+  display: block;
+  width: 100%;
+  transform: rotate(-2deg);
+}
+
+/* -------------------- Secciones -------------------- */
+.section-pad { padding: 5.5rem 0; }
+
+.eyebrow-serif {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--megs-naranja);
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+
+.eyebrow-dot {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--megs-tinta);
+  margin-bottom: 1.25rem;
+}
+.eyebrow-dot::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 9px;
+  height: 9px;
+  margin-right: 0.6rem;
+  margin-bottom: 2px;
+  border-radius: 50%;
+  background: var(--accent, var(--megs-naranja));
+}
+
+/* -------------------- Hero editorial -------------------- */
+.hero-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--megs-naranja);
+}
+.hero-mega {
+  font-family: var(--font-display);
+  font-size: 7rem;
+  line-height: 0.9;
+  margin: 0.4rem 0 1.25rem;
+  color: var(--megs-tinta);
+}
+.hero-focus-line {
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+}
+.hero-focus-line span { color: var(--megs-naranja); }
+.hero-rule {
+  border: none;
+  border-top: 1.5px solid rgba(36, 31, 28, 0.15);
+  margin: 2.25rem 0;
+}
+
+/* -------------------- Bloque tipo carta (Acerca de mi) -------------------- */
+.letter-block {
+  max-width: 62rem;
+  margin: 0 auto;
+}
+.letter-heading {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+.letter-meta {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  color: rgba(36, 31, 28, 0.55);
+  border-top: 1.5px solid rgba(36, 31, 28, 0.15);
+  border-bottom: 1.5px solid rgba(36, 31, 28, 0.15);
+  padding: 0.9rem 0;
+  margin-bottom: 2.5rem;
+}
+.letter-meta span {
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+.letter-body p {
+  font-size: 1.15rem;
+  max-width: 60ch;
+}
+.letter-sign {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+}
+
+/* -------------------- Bloques de proyecto grandes (Portafolio) -------------------- */
+.project-block {
+  display: block;
+  padding: 2.75rem 0;
+  border-top: 1.5px solid rgba(36, 31, 28, 0.15);
+  text-decoration: none;
+  color: var(--megs-tinta);
+}
+.project-block:last-child { border-bottom: 1.5px solid rgba(36, 31, 28, 0.15); }
+.project-block .project-thumb {
+  border-radius: 1.1rem;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+}
+.project-block .project-thumb img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.project-block:hover .project-thumb img { transform: scale(1.05); }
+.project-block .project-num {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--accent, var(--megs-naranja));
+  margin-bottom: 0.4rem;
+  display: block;
+}
+.project-block h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.project-block .project-tags {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  color: rgba(36, 31, 28, 0.6);
+}
+
+/* -------------------- Acerca de mi -------------------- */
+#acerca .about-photo {
+  background: var(--megs-celeste);
+  border-radius: 1.5rem;
+  padding: 0.9rem;
+}
+#acerca .about-photo img {
+  border-radius: 1.1rem;
+  width: 100%;
+  display: block;
+}
+
+.skill-pill {
+  display: inline-block;
+  background: var(--megs-crema);
+  border: 1.5px solid var(--megs-tinta);
+  border-radius: 999px;
+  padding: 0.35rem 0.95rem;
+  font-size: 0.9rem;
+  margin: 0 0.4rem 0.4rem 0;
+}
+
+/* -------------------- Servicios -------------------- */
+.card-servicio {
+  background: var(--megs-crema);
+  border: none;
+  border-radius: 1.25rem;
+  padding: 2rem 1.6rem;
+  height: 100%;
+  box-shadow: 0 10px 24px rgba(36, 31, 28, 0.06);
+  border-top: 6px solid var(--accent, var(--megs-naranja));
+  transition: transform 0.25s ease;
+}
+.card-servicio:hover { transform: translateY(-6px); }
+
+.card-servicio .icon-wrap {
+  width: 3.1rem;
+  height: 3.1rem;
+  line-height: 3.1rem;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--accent, var(--megs-naranja));
+  color: var(--megs-crema);
+  font-size: 1.35rem;
+  margin-bottom: 1.1rem;
+}
+
+.card-servicio.acc-naranja,
+.quick-link-card.acc-naranja { --accent: var(--megs-naranja); }
+.card-servicio.acc-celeste,
+.quick-link-card.acc-celeste { --accent: var(--megs-celeste); }
+.card-servicio.acc-oliva,
+.quick-link-card.acc-oliva   { --accent: var(--megs-oliva); }
+.card-servicio.acc-rosa,
+.quick-link-card.acc-rosa    { --accent: var(--megs-rosa); }
+
+/* -------------------- Contacto -------------------- */
+#contacto { background-color: var(--megs-beige); }
+
+.map-frame {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: none;
+  width: 100%;
+  min-height: 360px;
+}
+
+.social-row { margin: 0; }
+
+.social-btn {
+  display: inline-block;
+  width: 3.1rem;
+  height: 3.1rem;
+  line-height: 2.9rem;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--megs-crema);
+  color: var(--megs-tinta);
+  font-size: 1.2rem;
+  border: 1.5px solid var(--megs-tinta);
+  margin: 0 0.75rem 0.75rem 0;
+  transition: all 0.2s ease;
+}
+.social-btn:hover { background: var(--megs-tinta); color: var(--megs-crema); }
+
+.contact-card {
+  background: var(--megs-crema);
+  border-radius: 1.5rem;
+  padding: 2rem;
+}
+
+/* -------------------- Formulario de contacto -------------------- */
+.form-label-megs {
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.form-control-megs {
+  width: 100%;
+  border-radius: 0.9rem;
+  border: 1.5px solid var(--megs-tinta);
+  padding: 0.65rem 1rem;
+  background: var(--megs-crema);
+  font-family: var(--font-body);
+  margin-bottom: 1.1rem;
+}
+.form-control-megs:focus {
+  outline: none;
+  border-color: var(--megs-naranja);
+  box-shadow: 0 0 0 3px rgba(255, 145, 77, 0.25);
+}
+textarea.form-control-megs { min-height: 140px; resize: vertical; }
+
+.form-msg-ok {
+  display: none;
+  background: var(--megs-oliva);
+  color: var(--megs-tinta);
+  border-radius: 0.9rem;
+  padding: 0.85rem 1.1rem;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+.form-msg-ok.show { display: block; }
+
+/* -------------------- Tarjetas de enlace rapido (Inicio) -------------------- */
+.quick-link-card {
+  display: block;
+  background: var(--megs-crema);
+  border-radius: 1.25rem;
+  padding: 1.75rem 1.5rem;
+  height: 100%;
+  box-shadow: 0 10px 24px rgba(36, 31, 28, 0.06);
+  border-top: 6px solid var(--accent, var(--megs-naranja));
+  transition: transform 0.25s ease;
+  color: var(--megs-tinta);
+}
+.quick-link-card:hover { transform: translateY(-6px); color: var(--megs-tinta); }
+.quick-link-card .icon-wrap {
+  width: 3.1rem;
+  height: 3.1rem;
+  line-height: 3.1rem;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--accent, var(--megs-naranja));
+  color: var(--megs-crema);
+  font-size: 1.35rem;
+  margin-bottom: 1.1rem;
+}
+
+/* -------------------- Footer -------------------- */
+.footer-megs {
+  background: var(--megs-tinta);
+  color: var(--megs-crema);
+  padding-top: 4.5rem;
+}
+.footer-megs a { color: var(--megs-crema); opacity: 0.85; }
+.footer-megs a:hover { opacity: 1; color: var(--megs-naranja); }
+
+.footer-top {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(251, 246, 241, 0.15);
+}
+.footer-col-title {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+.footer-col a {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+}
+.footer-cta {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  line-height: 1.15;
+  color: var(--megs-crema);
+  max-width: 20ch;
+}
+
+.footer-mega {
+  font-family: var(--font-display);
+  font-size: 7rem;
+  line-height: 0.85;
+  margin: 2.5rem 0 1.5rem;
+  color: var(--megs-crema);
+  word-break: break-word;
+}
+
+.footer-bottom {
+  padding: 1.5rem 0 2rem;
+  border-top: 1px solid rgba(251, 246, 241, 0.15);
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+/* -------------------- Responsive -------------------- */
+@media (max-width: 991.98px) {
+  .hero-mega { font-size: 5rem; }
+  .letter-heading { font-size: 2.9rem; }
+  .footer-mega { font-size: 5rem; }
+}
+
+@media (max-width: 767.98px) {
+  .section-pad { padding: 3.5rem 0; }
+  #inicio { padding-top: 5.5rem; background-size: 260px; }
+  .hero-mega { font-size: 3.6rem; }
+  .letter-heading { font-size: 2.4rem; }
+  .project-block h3 { font-size: 1.5rem; }
+  .footer-cta { font-size: 1.7rem; }
+  .footer-mega { font-size: 3.5rem; }
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto · Megs Girón</title>
+  <meta name="description" content="Contacta a Megan 'Megs' Girón por formulario, correo o redes sociales para tu próximo proyecto de branding y comunicación.">
+  <meta name="keywords" content="Megs, contacto, formulario de contacto, Tegucigalpa, Instagram, correo">
+  <meta name="author" content="Megan Girón">
+  <meta name="robots" content="index, follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap-custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body id="top">
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-megs fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo-megs.svg" alt="Logotipo personal de Megs">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMegs" aria-controls="navMegs" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMegs">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="acerca.html">Acerca de mí</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="portafolio.html">Portafolio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-megs btn-sm" href="contacto.html">Escríbeme</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="contacto" class="section-pad" style="padding-top: 8.5rem;">
+      <div class="container">
+        <p class="eyebrow-dot">Contacto</p>
+        <h1 class="mb-5">Hablemos de tu próximo proyecto</h1>
+
+        <div class="row g-4 mb-5">
+          <!-- Formulario sencillo de contacto -->
+          <div class="col-lg-6">
+            <div class="contact-card h-100">
+              <h2 class="h4 mb-3">Escríbeme directamente</h2>
+              <form id="formContacto" novalidate>
+                <label class="form-label-megs" for="nombre">Nombre</label>
+                <input type="text" class="form-control-megs" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+
+                <label class="form-label-megs" for="correo">Correo electrónico</label>
+                <input type="email" class="form-control-megs" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+
+                <label class="form-label-megs" for="mensaje">Mensaje</label>
+                <textarea class="form-control-megs" id="mensaje" name="mensaje" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+
+                <button type="submit" class="btn btn-megs">Enviar mensaje</button>
+                <p class="form-msg-ok" id="formMsgOk">¡Gracias por tu mensaje! Te responderé lo antes posible.</p>
+              </form>
+            </div>
+          </div>
+
+          <!-- Redes sociales -->
+          <div class="col-lg-6">
+            <div class="contact-card h-100 d-flex flex-column justify-content-center">
+              <h2 class="h4 mb-3">Sígueme y escríbeme</h2>
+              <p>La forma más rápida de contactarme es por redes sociales o correo electrónico. ¡Con gusto conversamos sobre tu proyecto!</p>
+              <div class="social-row mt-3">
+                <a class="social-btn" href="https://instagram.com/megancreativa" target="_blank" rel="noopener" aria-label="Instagram de Megs">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a class="social-btn" href="https://www.linkedin.com/in/megangiron/" target="_blank" rel="noopener" aria-label="LinkedIn de Megs">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a class="social-btn" href="mailto:megancastellon19@gmail.com" aria-label="Correo de Megs">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mapa -->
+        <figure class="mb-0">
+          <iframe class="map-frame" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Tegucigalpa,Honduras&output=embed"
+            title="Ubicación aproximada en Tegucigalpa, Honduras" allowfullscreen>
+          </iframe>
+          <figcaption class="small text-muted mt-2">Con base en Tegucigalpa, Honduras — disponible para proyectos remotos.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-megs">
+    <div class="container">
+      <div class="row footer-top gy-4">
+        <div class="col-md-4 col-12">
+          <p class="footer-cta">¿Creamos algo juntos?</p>
+          <a href="mailto:megancastellon19@gmail.com" class="btn-outline-megs-light mt-3 d-inline-block">Empecemos a hablar</a>
+        </div>
+        <div class="col-md-2 col-6 footer-col">
+          <p class="footer-col-title">Navegación</p>
+          <a href="index.html">Inicio</a>
+          <a href="acerca.html">Acerca de mí</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="portafolio.html">Portafolio</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="col-md-2 col-6 footer-col">
+          <p class="footer-col-title">Redes</p>
+          <a href="https://instagram.com/megancreativa" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.linkedin.com/in/megangiron/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:megancastellon19@gmail.com">Correo</a>
+        </div>
+        <div class="col-md-4 col-12 footer-col">
+          <p class="footer-col-title">Enfoque</p>
+          <a href="servicios.html">Branding</a>
+          <a href="servicios.html">Content Creation</a>
+          <a href="servicios.html">Social Media</a>
+          <a href="servicios.html">Fotografía</a>
+        </div>
+      </div>
+
+   
+
+      <div class="footer-bottom row">
+        <span class="col-md-6">© <span id="anio"></span> Megan Girón. Todos los derechos reservados.</span>
+        <a class="col-md-6 text-md-end" href="#top">Volver arriba ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
